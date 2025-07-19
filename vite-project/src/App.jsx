@@ -3,15 +3,12 @@ function MyComponent() {
 }
 
 function App() {
+  const handleClick = () => {
+    alert("hello");
+  };
   return (
     <>
-      <button
-        onClick={function () {
-          alert("hello");
-        }}
-      >
-        我是按鈕
-      </button>
+      <button onClick={handleClick}>我是按鈕</button>
       <MyComponent />
     </>
   );
@@ -29,3 +26,4 @@ export default App;
 //  HTML 的 class 在 JSX 中是 className (駝峰)
 // HTML 的 for 在 JSX 中是 htmlFor (駝峰)
 // 在 JSX 中使用 {{ }} 來使用物件
+// 函數後面的 () 是執行的意思
