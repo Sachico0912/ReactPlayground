@@ -10,10 +10,14 @@ function App() {
     { content: "2號", id: 2 },
     { content: "3號", id: 3 },
   ];
-
+  const filterItems = listItems.filter((item) => {
+    if (item.content !== "2號") {
+      return true;
+    }
+  });
   return (
     <>
-      {listItems.map((item) => {
+      {filterItems.map((item) => {
         return <div key={item.id}>{item.content}</div>;
       })}
     </>
