@@ -5,6 +5,8 @@ function MyComponent(props) {
   //a: "hello world"
   //[[Prototype]]: Object
 
+  props.c(); //呼叫父傳遞過來的函式
+
   return (
     <>
       <div>{props.a}</div>
@@ -16,7 +18,13 @@ function MyComponent(props) {
 function App() {
   return (
     <>
-      <MyComponent a="hello world" b="你好" />
+      <MyComponent
+        a="hello world"
+        b="你好"
+        c={() => {
+          console.log("hi");
+        }}
+      />
     </>
   );
 }
