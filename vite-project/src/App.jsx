@@ -3,12 +3,19 @@ function MyComponent() {
 }
 
 function App() {
+  const text = "Hello World";
+
   return (
-    <div>
+    <>
+      <input type="text" placeholder={text} />
+      <h1 style={{ backgroundColor: "red" }} className="h1-tag">
+        {text.toUpperCase()}
+      </h1>
+      {/* 只有這裡可以使用 JS 語法 */}
       <MyComponent />
       <MyComponent />
       <MyComponent />
-    </div>
+    </>
   );
 }
 
@@ -18,3 +25,9 @@ export default App;
 // 執行時 vite 將 JSX 轉譯成 JS 物件 React 轉換物件為Html
 // PascalCase 命名，每個單字首字母大寫
 // parent component 及 child component
+// component 可以重複使用
+// <div> 元素可以省略使用 fragment `<>` 包裹
+// 利用 {} 可以在 HTML 裡面寫 JS
+//  HTML 的 class 在 JSX 中是 className (駝峰)
+// HTML 的 for 在 JSX 中是 htmlFor (駝峰)
+// 在 JSX 中使用 {{ }} 來使用物件
