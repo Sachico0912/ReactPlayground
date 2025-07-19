@@ -1,6 +1,6 @@
 function App() {
   return (
-    <div className={false ? "a c" : "b c"}>
+    <div className={`c ${false ? "a" : "b"}`}>
       {true ? <h1>hello</h1> : <h1>world</h1>}
     </div>
   );
