@@ -1,17 +1,17 @@
+import { Component } from "react";
+
 function MyComponent() {
   return <h1>你好</h1>;
 }
 
 function App() {
-  const handleClick = (e) => {
-    console.log(e);
-  };
-  return (
-    <>
-      <button onClick={handleClick}>我是按鈕</button>
-      <MyComponent />
-    </>
-  );
+  const listItems = [
+    <MyComponent key="0" />,
+    <MyComponent key="1" />,
+    <MyComponent key="2" />,
+  ];
+
+  return <>{listItems}</>;
 }
 
 export default App;
