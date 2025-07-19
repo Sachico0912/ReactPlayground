@@ -1,3 +1,5 @@
+import "./App.css";
+
 function MyComponent() {
   return <h1>你好</h1>;
 }
