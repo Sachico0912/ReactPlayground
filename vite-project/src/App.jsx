@@ -1,10 +1,28 @@
+function MyComponent(props) {
+  console.log(props);
+
+  //{a: 'hello world'}
+  //a: "hello world"
+  //[[Prototype]]: Object
+
+  return (
+    <>
+      <div>{props.a}</div>
+      <div>{props.b}</div>
+    </>
+  );
+}
+
 function App() {
   return (
-    <div className={`c ${false ? "a" : "b"}`}>{true && <h1>hello</h1>}</div>
+    <>
+      <MyComponent a="hello world" b="你好" />
+    </>
   );
 }
 
 export default App;
 
-// AND 邏輯運算的左邊的值是真值的時候，會回傳右邊的值；反之則回傳左邊
-// JSX 會忽略false 跟 undefined 的值
+// MyComponent 是子
+// App 是父
+// props 是父傳遞資料給子
