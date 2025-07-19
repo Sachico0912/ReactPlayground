@@ -6,12 +6,18 @@ function MyComponent() {
 
 function App() {
   const listItems = [
-    <MyComponent key="0" />,
-    <MyComponent key="1" />,
-    <MyComponent key="2" />,
+    { content: "1號", id: 1 },
+    { content: "2號", id: 2 },
+    { content: "3號", id: 3 },
   ];
 
-  return <>{listItems}</>;
+  return (
+    <>
+      {listItems.map((item) => {
+        return <div key={item.id}>{item.content}</div>;
+      })}
+    </>
+  );
 }
 
 export default App;
