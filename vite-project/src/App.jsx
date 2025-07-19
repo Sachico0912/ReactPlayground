@@ -1,5 +1,9 @@
 import { useState } from "react";
 
+function ChildComponent({ clicks }) {
+  return <div>{clicks}</div>;
+}
+
 function MyComponent() {
   const [clicks, setClicks] = useState(0);
   const handleClick = () => {
@@ -9,6 +13,7 @@ function MyComponent() {
   return (
     <>
       <button onClick={handleClick}>點擊次數:{clicks}</button>
+      <ChildComponent clicks={clicks} />
     </>
   );
 }
@@ -16,6 +21,8 @@ function MyComponent() {
 function App() {
   return (
     <>
+      <MyComponent />
+      <MyComponent />
       <MyComponent />
     </>
   );
@@ -27,3 +34,5 @@ export default App;
 // useState 會回傳陣列
 //1. state 的內容
 //2. 更改 state 內容的函數
+//不同組件之間的 state 是獨立的，互不影響。
+//可以把 state 狀態傳遞給子元素
