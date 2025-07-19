@@ -1,21 +1,17 @@
-import "./App.css";
-
 function MyComponent() {
   return <h1>你好</h1>;
 }
 
 function App() {
-  const text = "Hello World";
-
   return (
     <>
-      <input type="text" placeholder={text} />
-      <h1 style={{ backgroundColor: "red" }} className="h1-tag">
-        {text.toUpperCase()}
-      </h1>
-      {/* 只有這裡可以使用 JS 語法 */}
-      <MyComponent />
-      <MyComponent />
+      <button
+        onClick={function () {
+          alert("hello");
+        }}
+      >
+        我是按鈕
+      </button>
       <MyComponent />
     </>
   );
