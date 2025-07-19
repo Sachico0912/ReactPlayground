@@ -3,8 +3,8 @@ function MyComponent() {
 }
 
 function App() {
-  const handleClick = () => {
-    alert("hello");
+  const handleClick = (e) => {
+    console.log(e);
   };
   return (
     <>
