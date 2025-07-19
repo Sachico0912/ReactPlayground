@@ -1,7 +1,5 @@
-import ChildComponent from "./ChildComponent";
-
 function MyComponent() {
-  return <ChildComponent />;
+  return <h1>你好</h1>;
 }
 
 function App() {
